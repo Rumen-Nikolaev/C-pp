@@ -9,7 +9,7 @@ int main()
     cin >> n;
     
     for(int i = 2; i <= n; i++) {
-        Fac += i;
+        Fac *= i;
     }
     
     cout << Fac << endl;
