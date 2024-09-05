@@ -32,6 +32,42 @@ int main()
     return 0;
 }
 
+a-2)
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+   int c = 0;
+   float pi = 0;
+   float a = 1;
+   int counter = 0;
+   
+   for(a = 1; a <= 10000; a = a + 2) {
+       counter++;
+       
+    if (c == 0) 
+    {
+        pi = pi + 4/a;
+        c++;
+    }
+    else {
+        pi = pi - 4/a;
+        c--;
+    }
+    
+    if (counter == 500) {
+        cout << fixed << setprecision(15);
+        cout << "PI's Value = " << pi << endl;
+        counter = 0;
+    }
+   }
+   
+
+    return 0;
+}
+
 a) Second Variant
 #include <iostream>
 #include <iomanip>
