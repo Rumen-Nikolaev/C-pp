@@ -25,7 +25,7 @@ int main()
         }
     }
     
-    cout << "Broi zavurtaniq na ti x li si: " << i;
+    cout << "Broi zavurtaniq na ti x li si: " << ans;
     
 
     return 0;
