@@ -33,7 +33,7 @@ int main()
             }
             if (buff > a[mid]) 
             {
-                loc = mid + 1;
+                low = mid + 1;
             }
             else {
                 high = mid - 1;
