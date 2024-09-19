@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-    int a[8]{2, 1, 4, 0, 6, 4, 1, 4, 7};
-    int b[8];
+    int a[]{2, 1, 4, 0, 6, 4, 1, 4, 7};
+    int b[];
     int index = 0, min = a[0], max = a[0], size = sizeof(a) / sizeof(a[0]);
     
     for(int i = 0; i < size; i++) {
