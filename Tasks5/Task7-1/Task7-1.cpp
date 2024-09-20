@@ -3,6 +3,49 @@ using namespace std;
 
 int main()
 {
+    int n, comparisons = 0; 
+    cout << "Enter the number of elements: ";
+    cin >> n;
+    
+    int sum = n * (n + 1) / 2;
+    cout << "Sum of first " << n << " numbers: " << sum << endl;
+    
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        arr[i] = i + 1;
+    }
+    
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            comparisons++;
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        swap(arr[i], arr[minIndex]);
+    }
+    
+    cout << "Sorted array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    
+    cout << "Total comparisons: " << comparisons << endl;
+
+    return 0;
+}
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
     int n, *arr, *sum_arr, counter = 0;
     cin >> n;
     
