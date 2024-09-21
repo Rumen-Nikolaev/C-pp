@@ -17,11 +17,10 @@ int main()
         matrica.push_back(arr);
     }
     
-    for(int r = 1, c = 0; r < num; r++, c++)
+    for(int r = 0, c = num - 1; r < num; r++, c--)
     {
         cout << matrica[r][c] << endl;
     }
 
-    
     return 0;
 }
