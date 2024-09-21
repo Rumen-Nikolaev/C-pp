@@ -46,7 +46,6 @@ int main()
     int count = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Nashiq masiv: " << endl;
-    cout << count << endl;
 
     for(int i = 0; i < count; i++) {
         cout << arr[i] << " ";
