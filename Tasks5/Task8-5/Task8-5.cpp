@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int a[] = {200, 150, 100, 50};
+    int a[] = {30000, 20000, 15000, 10000};
     int n = sizeof(a) / sizeof(a[0]), verification = 0;
     int i, buff, j;
     
@@ -37,7 +37,7 @@ using namespace std;
 
 int main()
 {
-    int a[] = {50, 100, 150, 200};
+    int a[] = {10000, 15000, 20000, 30000};
     int n = sizeof(a) / sizeof(a[0]), verification = 0;
     int i, buff, j;
     
