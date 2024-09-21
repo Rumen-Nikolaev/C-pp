@@ -8,7 +8,7 @@ int main()
     vector <int> y(8); y = {0, 0, 0, 0, 4, 1, 3, 9};
     vector <int> d(8);
     
-    int total, prenos;
+    int total, prenos = 0;
     
     for(int i = 7; i >= 0; i--) {
         total = x[i] + y[i] + prenos;
