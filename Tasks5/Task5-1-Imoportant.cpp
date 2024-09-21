@@ -1,4 +1,4 @@
-<iostream>
+#include <iostream>
 #include <iomanip> // За std::setprecision
 
 using namespace std;
@@ -46,7 +46,7 @@ int main() {
     return 0;
 }
 
-<iostream>
+#include <iostream>
 #include <iomanip> // За std::setprecision
 
 using namespace std;
@@ -65,7 +65,9 @@ int main() {
     cout << fixed << setprecision(15) << "π ≈ " << pi << endl;
 
     return 0;
-} #include <iostream>
+} 
+
+#include <iostream>
 #include <iomanip> // За std::setprecision
 
 using namespace std;
