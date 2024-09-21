@@ -20,7 +20,7 @@ int gcd(int a, int b) {
 int main() {
   int x, y;
 
-  cout << "Enter two integers: << endl;
+  cout << "Enter two integers: " << endl;
   cin >> x >> y;
 
   cout << gcd(x, y);
