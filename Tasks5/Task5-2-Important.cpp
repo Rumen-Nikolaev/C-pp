@@ -74,3 +74,42 @@ int main() {
     return 0;
 }
 
+
+
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double sinWithoutFactorial(double x) {
+    double sum = x;
+    double term = x;
+    int n = 1;
+
+    while (fabs(term) > 0.000001) {
+        term *= -x * x / ((2 * n) * (2 * n + 1));
+        sum += term;
+        n++;
+    }
+
+    cout << "Number of iterations: " << count << endl;
+
+    return sum;
+}
+
+int main() {
+    double degrees, radians;
+
+    cout << "Enter an angle in degrees: ";
+    cin >> degrees;
+
+    radians = degrees * M_PI / 180.0;
+
+    double result = sinWithoutFactorial(radians);
+    
+    cout << "sin(" << degrees << " degrees) = " << result << endl;
+
+    return 0;
+}
+
+
