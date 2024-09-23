@@ -1,26 +1,4 @@
-#include <iostream>
-using namespace std;
 
-int main()
-{
-    int arr[5] = {7, 3, 2, 1, 6};
-    int count = 0; 
-    int n = 5;
-
-    for(int i = 0; i < n - 1; i++)
-    {
-        for(int j = i + 1; j < n; j++) {
-            if (arr[i] > arr[j])
-            {
-                count++;
-            }
-        }
-    }
-    
-    cout << "Broi inversii: " << count << endl;
-    
-    return 0;
-}
 
 
 #include <iostream>
