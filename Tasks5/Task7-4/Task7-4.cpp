@@ -3,6 +3,32 @@ using namespace std;
 
 int main()
 {
+    int arr[7] = {1, 0, 4, 4, 5, 9, 2};
+    int sum = 0, count = 0;
+    for(int i = 0; i < 6; i++) 
+    {
+        for(int j = i + 1; j < 7; j++)
+        {
+            count++;
+        }
+        sum += count;
+        count = 0;
+        cout << arr[i];
+    }
+    
+    cout << "\n";
+    cout << sum;
+    
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
     int arr[5] = {7, 3, 2, 1, 6};
     int count, n = 5;
     
