@@ -45,34 +45,37 @@ void anchor(vector<char> arr2) {
             cout << "The letter " << target << " was not found after " << checks << " checks." << endl;
         }
     }
+
+    cout << "Chisloto " << x << " ne e namereno." << endl;
 }
 
 void Cql_vector(vector<char> arr3) {
-    bool sequence_arr[6] {false, false, false, false, false, false, false};
-    char sequence_check[6] = {'9', '8', '7', 'я', 'ъ', 'о'};
+    bool sequence_arr[7] = {false, false, false, false, false, false, false};
+    char sequence_check[7] = {'9', '8', '7', 'q', 'iu', 'u', 'o'};
     int sequence_index = 0;
-    
-    cout << "Nashiq masiv: " << endl;
     int count = arr3.size();
-    for(int i = 0; i < count; i++) {
+
+    cout << "Nashiq masiv: " << endl;
+
+    for (int i = 0; i < count; i++) {
         cout << arr3[i] << " ";
     }
     cout << "\n";
-    
-    for(int i = 0; i < count; i++) {
-        if (arr3[i] == sequence_check[sequence_index]) {
+
+    for (int i = 0; i < count; i++) {
+        if (sequence_index < 7 && arr[i] == sequence_check[sequence_index]) {
             cout << "Posledovatelnost(" << i + 1 << ") - ";
-            cout << sequence_arr[sequence_index] << "->";
+            cout << sequence_arr[sequence_index] << " -> ";
             sequence_arr[sequence_index] = true;
             cout << sequence_arr[sequence_index] << endl;
             sequence_index++;
         }
     }
-    
+
     cout << endl;
-    for(int i = 0; i < 6; i++) {
-        cout << "Posledovatelnost" << i + 1 << ") -";
-        
+    for (int i = 0; i < 7; i++) {
+        cout << "Posledovatelnost(" << i + 1 << ") - ";
+
         if (sequence_arr[i]) {
             cout << "Da" << endl;
         } else {
