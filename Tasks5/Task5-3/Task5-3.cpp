@@ -41,7 +41,7 @@ int main()
     int i;
     char arr[15] = {'F', '1', '0', '4', '4', '5', '9', 'N', 'i', 'k', 'o', 'l', 'a', 'e', 'v'};
     bool sequence_arr[7] = {false, false, false, false, false, false, false};
-    char sequence_check[7] = {'9', '8', '7', 'a', 'b', 'c', 'd'}; // Use ASCII characters for simplicity
+    char sequence_check[7] = {'9', '8', '7', 'q', 'iu', 'u', 'o'}; 
     int sequence_index = 0;
     int count = sizeof(arr) / sizeof(arr[0]);
 
