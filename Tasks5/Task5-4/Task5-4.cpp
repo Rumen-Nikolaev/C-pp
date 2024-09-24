@@ -23,7 +23,7 @@ void Dihotomichno(vector<int> arr1) {
 }
 
 void anchor(vector<char> arr2) {
-    char searchLetters[] = {'а', 'б', 'в', 'г'};
+    char searchLetters[] = {'a', 'b', 'v', 'g'};
     int numLetters = sizeof(searchLetters) / sizeof(searchLetters[0]);
     
     for(int i = 0; i < numLetters; ++i) {
