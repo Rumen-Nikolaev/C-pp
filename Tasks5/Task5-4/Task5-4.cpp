@@ -62,7 +62,7 @@ void Cql_vector(vector<char> arr3) {
     cout << "\n";
 
     for (int i = 0; i < count; i++) {
-        if (sequence_index < 7 && arr3[i] == sequence_check[sequence_index]) {
+         if (sequence_index < 7 && arr3[i] == sequence_check[sequence_index]) {
             cout << "Posledovatelnost(" << i + 1 << ") - ";
             cout << sequence_arr[sequence_index] << " -> ";
             sequence_arr[sequence_index] = true;
