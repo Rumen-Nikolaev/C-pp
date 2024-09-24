@@ -21,7 +21,7 @@ void Dihotomichno(vector<int> arr1) {
     }
 }
 
-void anchor(vector<char> arr1) {
+void anchor(vector<char> arr2) {
     int count, i;
     char element;
     char arr2[] = {'N', 'i', 'k', 'o', 'l', 'a', 'e', 'v'};
@@ -47,7 +47,7 @@ void anchor(vector<char> arr1) {
     cout << "\n";
 }
 
-void Cql_vector(vector<char> arr1) {
+void Cql_vector(vector<char> arr3) {
     int count, i;
     bool sequence_arr[7] {false, false, false, false, false, false, false};
     char sequence_check[7] = {'9', '8', '7', 'я', 'ъ', 'о'};
