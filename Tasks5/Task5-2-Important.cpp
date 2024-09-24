@@ -1,35 +1,37 @@
-
 #include <iostream>
 #include <iomanip>
 #include <cmath>
 using namespace std;
 
-double sinWithoutFactorial(double x) {
+double sinWithoutFactorial(double x, int &counter) {
     double sum = 0.0;
     double term = x; 
     int n = 1;
-    int counter = 1;
+    counter = 1;
 
     while (fabs(term) > 0.000001) {
         sum += term;
         n += 2;
         term = -term * x * x / (n * (n - 1));
-        counter++;
+        counter++; 
     }
 
-    cout << "Number of iterations: " << counter << endl;
     return sum;
 }
 
 int main() {
     double degrees, radians;
+    int counter;
 
     cout << "Enter angle in degrees: ";
     cin >> degrees;
 
     radians = degrees * M_PI / 180.0;
 
-    cout << "sin(" << degrees << " degrees) = " << fixed << setprecision(15) << sinWithoutFactorial(radians) << endl;
+    double result = sinWithoutFactorial(radians, counter);
+
+    cout << "sin(" << degrees << " degrees) = " << result << endl;
+    cout << "Number of iterations (counter): " << counter << endl;
 
     return 0;
 }
@@ -67,7 +69,7 @@ int main() {
 
     radians = degrees * M_PI / 180.0;
 
-    cout << "sin(" << degrees << " degrees) = " << fixed << setprecision(15) << sinWithFactorial(radians) << endl;
+    cout << "sin(" << degrees << " degrees) = " << sinWithFactorial(radians) << endl;
 
     return 0;
 }
