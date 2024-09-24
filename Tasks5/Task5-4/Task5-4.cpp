@@ -23,7 +23,6 @@ void Dihotomichno(vector<int> arr1) {
 }
 
 void anchor(vector<char> arr2) {
-    int count, i;
     char element;
     cout << "Nashiq masiv: " << endl;
     int count = arr2.size(); 
@@ -40,6 +39,8 @@ void anchor(vector<char> arr2) {
             return;
         }
     }
+
+    arr2.push_back(element);  // Use push_back to add the element
     arr[i] = element;
     cout << "New arr: ";
     for(int i = 0; i < count + 1; i++) {
@@ -49,7 +50,6 @@ void anchor(vector<char> arr2) {
 }
 
 void Cql_vector(vector<char> arr3) {
-    int count, i;
     bool sequence_arr[7] {false, false, false, false, false, false, false};
     char sequence_check[7] = {'9', '8', '7', 'я', 'ъ', 'о'};
     int sequence_index = 0;
@@ -61,7 +61,7 @@ void Cql_vector(vector<char> arr3) {
     }
     cout << "\n";
     
-    for(int i = 0; i < 15; i++) {
+    for(int i = 0; i < count; i++) {
         if (arr1[i] == sequence_check[sequence_index]) {
             cout << "Posledovatelnost(" << i + 1 << ") - ";
             cout << sequence_arr[sequence_index] << "->";
