@@ -23,30 +23,28 @@ void Dihotomichno(vector<int> arr1) {
 }
 
 void anchor(vector<char> arr2) {
-    char element;
-    cout << "Nashiq masiv: " << endl;
-    int count = arr2.size(); 
-    for(int i = 0; i < count; i++) {
-        cout << arr2[i] << " ";
-    }
-    cout << "\n";
-    cout << "Tursim element: ";
-    cin >> element;
+    char searchLetters[] = {'а', 'б', 'в', 'г'};
+    int numLetters = sizeof(searchLetters) / sizeof(searchLetters[0]);
     
-    for(int i = 0; i < count; i++) {
-        if (arr2[i] == element) {
-            cout << "Elementa e na index: " << i << "\n";
-            return;
+    for(int i = 0; i < numLetters; ++i) {
+        char target = searchLetters[i];
+        int checks = 0;
+        bool found = false;
+        
+        for(int j = 0; j < arr2.size(); ++j) {
+            ++checks;
+            if (arr[j] == target) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            cout << "The letter " << target << " was found after " << checks << " checks." << endl;
+        } else {
+            cout << "The letter " << target << " was not found after " << checks << " checks." << endl;
         }
     }
-
-    arr2.push_back(element);  // Use push_back to add the element
-    arr[i] = element;
-    cout << "New arr: ";
-    for(int i = 0; i < count + 1; i++) {
-        cout << arr[i];
-    }
-    cout << "\n";
 }
 
 void Cql_vector(vector<char> arr3) {
@@ -62,7 +60,7 @@ void Cql_vector(vector<char> arr3) {
     cout << "\n";
     
     for(int i = 0; i < count; i++) {
-        if (arr1[i] == sequence_check[sequence_index]) {
+        if (arr3[i] == sequence_check[sequence_index]) {
             cout << "Posledovatelnost(" << i + 1 << ") - ";
             cout << sequence_arr[sequence_index] << "->";
             sequence_arr[sequence_index] = true;
