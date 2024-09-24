@@ -84,15 +84,17 @@ using namespace std;
 double sinWithoutFactorial(double x) {
     double sum = x;
     double term = x;
-    int n = 1;
+    int n = 1;  // Започваме от първия член
+    int count = 1;  // Брояч на итерациите, включваме първия член
 
     while (fabs(term) > 0.000001) {
         term *= -x * x / ((2 * n) * (2 * n + 1));
         sum += term;
         n++;
+        count++;  // Увеличаваме брояча при всяка итерация
     }
 
-    cout << "Number of iterations: " << n << endl;
+    cout << "Брой итерации: " << count << endl;  // Извеждаме броя на итерациите
 
     return sum;
 }
@@ -100,14 +102,16 @@ double sinWithoutFactorial(double x) {
 int main() {
     double degrees, radians;
 
-    cout << "Enter an angle in degrees: ";
+    cout << "Въведете ъгъл в градуси: ";
     cin >> degrees;
 
+    // Преобразуване на градусите в радиани
     radians = degrees * M_PI / 180.0;
 
+    // Изчисляване на sin(x) без факториел
     double result = sinWithoutFactorial(radians);
     
-    cout << "sin(" << degrees << " degrees) = " << result << endl;
+    cout << "sin(" << degrees << " градуса) = " << result << endl;
 
     return 0;
 }
