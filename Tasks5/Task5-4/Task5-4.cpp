@@ -70,7 +70,7 @@ void Cql_vector(vector<char> arr3) {
     }
     
     cout << endl;
-    for(int i = 0; i < 7; i++) {
+    for(int i = 0; i < 6; i++) {
         cout << "Posledovatelnost" << i + 1 << ") -";
         
         if (sequence_arr[i]) {
