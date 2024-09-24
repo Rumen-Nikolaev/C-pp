@@ -10,7 +10,7 @@ double sinWithoutFactorial(double x) {
     int n = 1;
     int counter = 1;
 
-    while (fabs(term) >= 0.000001) {
+    while (fabs(term) > 0.000001) {
         sum += term;
         n += 2;
         term = -term * x * x / (n * (n - 1));
