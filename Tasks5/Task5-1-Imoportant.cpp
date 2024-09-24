@@ -1,4 +1,103 @@
 #include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double pi = 0.0; 
+    int sign = 1;
+
+    for (int i = 0; i < 10000; ++i) {
+        pi += sign * 1.0 / (2 * i + 1);
+        sign *= -1; 
+
+        if ((i + 1) % 100 == 0) {
+            cout << "Iteration " << (i + 1) << ": p = " << fixed << setprecision(15) << (pi * 4) << endl;
+        }
+    }
+
+    pi *= 4; 
+    cout << fixed << setprecision(15) << "Final p = " << pi << endl;
+
+    return 0;
+}
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double pi = 0.0;
+    int sign = 1;
+    int i = 0;
+
+loop_start:
+    if (i >= 10000) goto end_loop;
+    
+    pi += (sign * 1.0 / (2 * i + 1));
+    sign *= -1;
+    
+    if ((i + 1) % 100 == 0) {
+        cout << "Iteration " << (i + 1) << ": p = " << fixed << setprecision(15) << (pi * 4) << endl;
+    }
+
+    ++i;
+    goto loop_start;
+
+end_loop:
+    pi *= 4;
+    cout << fixed << setprecision(15) << "Final p " << pi << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
 #include <iomanip> // За std::setprecision
 
 using namespace std;
