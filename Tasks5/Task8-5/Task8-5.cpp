@@ -39,7 +39,7 @@ int main()
 {
     int a[] = {10000, 15000, 20000, 30000};
     int n = sizeof(a) / sizeof(a[0]), verification = 0;
-    int i, buff, j;
+    int j;
     
     for(int i = 1; i < n; i++)
     {
