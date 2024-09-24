@@ -4,7 +4,7 @@ using namespace std;
 
 void Dihotomichno(vector<int> arr1) {
     int x = 4;
-    int n = sizeof(arr1) / sizeof(arr1[0]);
+    int n = arr1.size(); 
     int low = 0;
     int high = n - 1;
     int mid;
@@ -12,11 +12,12 @@ void Dihotomichno(vector<int> arr1) {
         mid = low + (high - low) / 2;
         if (arr1[mid] == x) {
             cout << "chisloto " << x << " e na " << mid << " index" << "\n";
+            return;
         }
         if (arr1[mid] < x) {
             low = mid + 1;
         } else {
-            hig = mid - 1;
+            high = mid - 1;
         }
     }
 }
@@ -25,17 +26,18 @@ void anchor(vector<char> arr2) {
     int count, i;
     char element;
     cout << "Nashiq masiv: " << endl;
-    count = sizeof(arr) / sizeof(arr[0]);
+    int count = arr2.size(); 
     for(int i = 0; i < count; i++) {
-        cout << arr[i] << " ";
+        cout << arr2[i] << " ";
     }
     cout << "\n";
     cout << "Tursim element: ";
     cin >> element;
     
     for(int i = 0; i < count; i++) {
-        if (arr[i] == element) {
+        if (arr2[i] == element) {
             cout << "Elementa e na index: " << i << "\n";
+            return;
         }
     }
     arr[i] = element;
@@ -53,9 +55,9 @@ void Cql_vector(vector<char> arr3) {
     int sequence_index = 0;
     
     cout << "Nashiq masiv: " << endl;
-    count = sizeof(arr1) / sizeof(arr1[0]);
+    int count = arr3.size();
     for(int i = 0; i < count; i++) {
-        cout << arr1[i] << " ";
+        cout << arr3[i] << " ";
     }
     cout << "\n";
     
