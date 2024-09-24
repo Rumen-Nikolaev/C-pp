@@ -33,7 +33,7 @@ void anchor(vector<char> arr2) {
         
         for(int j = 0; j < arr2.size(); ++j) {
             ++checks;
-            if (arr[j] == target) {
+            if (arr2[j] == target) {
                 found = true;
                 break;
             }
@@ -48,8 +48,8 @@ void anchor(vector<char> arr2) {
 }
 
 void Cql_vector(vector<char> arr3) {
-    bool sequence_arr[7] {false, false, false, false, false, false, false};
-    char sequence_check[7] = {'9', '8', '7', 'я', 'ъ', 'о'};
+    bool sequence_arr[6] {false, false, false, false, false, false, false};
+    char sequence_check[6] = {'9', '8', '7', 'я', 'ъ', 'о'};
     int sequence_index = 0;
     
     cout << "Nashiq masiv: " << endl;
