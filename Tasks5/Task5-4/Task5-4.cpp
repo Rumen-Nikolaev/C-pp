@@ -20,6 +20,7 @@ void Dihotomichno(vector<int> arr1) {
             high = mid - 1;
         }
     }
+     cout << "Chisloto " << x << " ne e namereno." << endl;
 }
 
 void anchor(vector<char> arr2) {
