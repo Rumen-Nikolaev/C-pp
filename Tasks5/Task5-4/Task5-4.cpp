@@ -11,7 +11,7 @@ void Dihotomichno(vector<int> arr1) {
     while(low <= high) {
         mid = low + (high - low) / 2;
         if (arr1[mid] == x) {
-            cout << "chisloto " << x << " e na " << mid << " index" << "\n";
+            cout << "Chisloto " << x << " e na " << mid << " index" << "\n";
             return;
         }
         if (arr1[mid] < x) {
@@ -20,7 +20,7 @@ void Dihotomichno(vector<int> arr1) {
             high = mid - 1;
         }
     }
-     cout << "Chisloto " << x << " ne e namereno." << endl;
+    cout << "Chisloto " << x << " ne e namereno." << endl;
 }
 
 void anchor(vector<char> arr2) {
@@ -46,8 +46,6 @@ void anchor(vector<char> arr2) {
             cout << "The letter " << target << " was not found after " << checks << " checks." << endl;
         }
     }
-
-    cout << "Chisloto " << x << " ne e namereno." << endl;
 }
 
 void Cql_vector(vector<char> arr3) {
@@ -64,7 +62,7 @@ void Cql_vector(vector<char> arr3) {
     cout << "\n";
 
     for (int i = 0; i < count; i++) {
-        if (sequence_index < 7 && arr[i] == sequence_check[sequence_index]) {
+        if (sequence_index < 7 && arr3[i] == sequence_check[sequence_index]) {
             cout << "Posledovatelnost(" << i + 1 << ") - ";
             cout << sequence_arr[sequence_index] << " -> ";
             sequence_arr[sequence_index] = true;
@@ -90,9 +88,11 @@ int main()
     vector<int> arr1 { 3, 4, 5, 6, 7, 8, 9 };
     vector<char> arr2 { 'N', 'i', 'k', 'o', 'l', 'a', 'e', 'v' };
     vector<char> arr3 {'F', '1', '0', '4', '4', '5', '9', 'N', 'i', 'k', 'o', 'l', 'a', 'e', 'v'};
+    
     Dihotomichno(arr1);
     anchor(arr2);
     Cql_vector(arr3);
 
     return 0;
 }
+
