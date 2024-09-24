@@ -3,6 +3,45 @@
 #include <cmath>
 using namespace std;
 
+double sinWithFactorial(double x) {
+    double sum = 0.0;
+    double term = x;
+    int n = 1;
+    double factorial = 1;
+    int counter = 0;
+
+    while (fabs(term) > 0.000001) {
+        sum += term;
+        counter++;
+        n += 2;
+        factorial *= n * (n - 1);
+        term = -term * x * x / factorial;
+    }
+
+    cout << "Number of iterations: " << counter << endl;
+    return sum;
+}
+
+int main() {
+    double degrees, radians;
+
+    cout << "Enter angle in degrees: ";
+    cin >> degrees;
+
+    radians = degrees * M_PI / 180.0;
+
+    cout << "sin(" << degrees << " degrees) = " << sinWithFactorial(radians) << endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
 double sinWithoutFactorial(double x, int &counter) {
     double sum = 0.0;
     double term = x; 
@@ -37,42 +76,7 @@ int main() {
 }
 
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-using namespace std;
 
-double sinWithFactorial(double x) {
-    double sum = 0.0;
-    double term = x;
-    int n = 1;
-    double factorial = 1;
-    int counter = 0;
-
-    while (fabs(term) > 0.000001) {
-        sum += term;
-        counter++;
-        n += 2;
-        factorial *= n * (n - 1);
-        term = -term * x * x / factorial;
-    }
-
-    cout << "Number of iterations: " << counter << endl;
-    return sum;
-}
-
-int main() {
-    double degrees, radians;
-
-    cout << "Enter angle in degrees: ";
-    cin >> degrees;
-
-    radians = degrees * M_PI / 180.0;
-
-    cout << "sin(" << degrees << " degrees) = " << sinWithFactorial(radians) << endl;
-
-    return 0;
-}
 
 
 
