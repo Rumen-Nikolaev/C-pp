@@ -92,7 +92,7 @@ double sinWithoutFactorial(double x) {
         n++;
     }
 
-    cout << "Number of iterations: " << count << endl;
+    cout << "Number of iterations: " << n << endl;
 
     return sum;
 }
