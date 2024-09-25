@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 #include <cmath>
 using namespace std;
 
@@ -8,17 +7,14 @@ double sinWithFactorial(double x) {
     double term = x;
     int n = 1;
     double factorial = 1;
-    int counter = 0;
 
     while (fabs(term) > 0.000001) {
         sum += term;
-        counter++;
         n += 2;
         factorial *= n * (n - 1);
         term = -term * x * x / factorial;
     }
 
-    cout << "Number of iterations: " << counter << endl;
     return sum;
 }
 
@@ -38,7 +34,6 @@ int main() {
 
 
 #include <iostream>
-#include <iomanip>
 #include <cmath>
 using namespace std;
 
