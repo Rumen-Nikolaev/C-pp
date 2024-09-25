@@ -16,6 +16,8 @@ int main() {
     }
     
     cout << "Broi inversii: " << count << endl;
+    
+    return 0;
 }
 
 
