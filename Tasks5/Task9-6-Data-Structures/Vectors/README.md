@@ -1,10 +1,10 @@
-In C++, a vector is a data structure that stores a sequence of elements that can be accessed by index.
+В C++ векторът е структура от данни, която съхранява последователност от елементи, които могат да бъдат достъпни чрез индекс.
 
-Unlike arrays, vectors can dynamically shrink and grow in size.
+За разлика от масивите, векторите могат динамично да се свиват и увеличават по размер.
 
-The standard <vector> library provide methods for vector operations:
+Стандартната <vector>библиотека предоставя методи за векторни операции:
 
-.push_back(): add element to the end of the vector.
-.pop_back(): remove element from the end of the vector.
-.size(): return the size of the vector.
-.empty(): return whether the vector is empty.
+.push_back(): добавете елемент към края на вектора.
+.pop_back(): премахване на елемент от края на вектора.
+.size(): връща размера на вектора.
+.empty(): връща дали векторът е празен.
